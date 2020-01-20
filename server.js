@@ -25,13 +25,12 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
-//connecting to MongoDB
-//mongoose.connect("mongodb://localhost/scraped_news");
+
 const MONGODB_URI =
   process.env.MONGODB_URI || "mongodb://localhost/scrapenews";
   mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
-  //connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+  //connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb, { useNewUrlParser: true });
 
   
   var db = mongoose.connection;
