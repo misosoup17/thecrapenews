@@ -30,6 +30,9 @@ app.set("view engine", "handlebars");
 const MONGODB_URI =
   process.env.MONGODB_URI || "mongodb://localhost/scrapenews";
   mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+
+  //connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+
   
   var db = mongoose.connection;
   db.on("error", console.error.bind(console, "connection error:"));
